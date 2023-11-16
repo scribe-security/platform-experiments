@@ -14,12 +14,12 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t docker.io/scribe-security/platform-experiments:${{ github.sha }} .
+          docker build -t scribe-security/platform-experiments:${{ github.sha }} .
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'docker.io/scribe-security/platform-experiments:${{ github.sha }}'
+          image-ref: 'scribe-security/platform-experiments:${{ github.sha }}'
           format: 'sarif'
           output: 'trivy-results.sarif'
 
