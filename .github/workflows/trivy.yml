@@ -16,7 +16,7 @@ jobs:
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
-          disable-rules: 'github-pat'
+          github-pat: false
           ignore-unfixed: true
           format: 'sarif'
           output: 'trivy-results.sarif'
