@@ -17,7 +17,7 @@ jobs:
         with:
           scan-type: 'fs'
           ignore-unfixed: true
-          github_pat: 'true'
+          github_pat: true
           format: 'sarif'
           output: 'trivy-results.sarif'
 
